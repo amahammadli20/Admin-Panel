@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="custom-container">
+        <div class="navigation">
+            <ul id="tabs-nav">
+                <li>
+                    <a href="">
+                        <span class="icon"></span>
+                        <span class="title">
+                            <img src="./assets/images/Logo-eunoia.png" alt="" style="width: 150px;">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab1" class="home-page-link">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            Ana Sehife
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tab2" class="aboutUs-link">
+                        <span class="icon">
+                            <i class="fa fa-briefcase"></i>
+                        </span>
+                        <span class="title">
+                            Haqqimizda
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tab4" class="position-link">
+                        <span class="icon">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        <span class="title">
+                            Vezife
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tab3" class="staff-link">
+                        <span class="icon">
+                            <i class="fa fa-id-card"></i>
+                        </span>
+                        <span class="title">
+                            Isciler
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tab5" class="departments-link">
+                        <span class="icon">
+                            <i class="fa fa-building"></i>
+                        </span>
+                        <span class="title">
+                            Sobeler
+                        </span>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="#tab6" class="imgUploading-link">
+                        <span class="icon">
+                            <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            Foto Qaleriya
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./login.html" class="aboutUs-link">
+                        <span class="icon">
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            Cixis
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu()"></div>
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="./assets/images/adminImg.jpg" alt="" style="width: 60px;"/>
+                </div>
+            </div>
+
+            <div id="tabs-content">
+                <section id="tab1" id="home-page-section" class="tab-content">
+                    <div class="row cards-wrapper d-flex justify-content-center ">
+                        <div class="col-lg-3 d-flex justify-content-between cards-wrapper-individuals">
+                            <div class="cards-wrapper-individuals-info">
+                                <div class="numbers">1,042</div>
+                                <div class="cardName">Daily Views</div>
+                            </div>
+            
+                            <div class="cards-wrapper-individuals-iconBox">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
+                        </div>
+        
+    
+                        <div class="col-lg-3 d-flex justify-content-between cards-wrapper-individuals">
+                            <div class="cards-wrapper-individuals-info">
+                                <div class="numbers">80</div>
+                                <div class="cardName">Sales</div>
+                            </div>
+            
+                            <div class="cards-wrapper-individuals-iconBox">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-3 d-flex justify-content-between cards-wrapper-individuals">
+                            <div class="cards-wrapper-individuals-info">
+                                <div class="numbers">6,042</div>
+                                <div class="cardName">Earnings</div>
+                            </div>
+            
+                            <div class="cards-wrapper-individuals-iconBox">
+                                <i class="fa fa-usd" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="container">
+                        <div class="main-div-wrapper intro-section-wrapper">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4 class="sections-motto">Start your digital bussiness</h4>
+                                    <h1>Let's Make Better World With Technology</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloremque possimus voluptatem eum dolorem reprehenderit.</p>
+                                    <button class="btn btn-warning">Discover More</button>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="./assets/images/illustratorBoy.png" alt="" style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div class="main-div-wrapper">
+                            <h1 class="main-div-wrapper-heading">Our Services</h1>
+                            <div class="row our-services-wrapper d-flex justify-content-center">
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/images/Security.png" alt="">
+                                    <h4>Cyber Security</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/images/Server.png" alt="">
+                                    <h4>Database</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/images/Cloud.png" alt="">
+                                    <h4>Cloud Service</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="row our-services-wrapper d-flex justify-content-center">
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/images/Smartphone.png" alt="">
+                                    <h4>Mobile App</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/images/Chat.png" alt="">
+                                    <h4>Web Design</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/images/Email.png" alt="">
+                                    <h4>Online Marketing</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section id="tab2" class="aboutUs-section all-sections" class="tab-content">
+                    <div class="container">
+                        <div class="aboutUs-info-div">
+                            <h1>Who we are?</h1>
+                            <div class="main-div-wrapper">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam voluptatibus, id magnam earum ea mollitia numquam ad architecto nostrum modi a amet impedit. Quo velit consequuntur, repellendus vel recusandae soluta deleniti. Numquam, quia amet? Velit, ipsum nesciunt error eveniet quo impedit minus maiores sapiente consectetur? Corrupti sed quasi deserunt temporibus aliquam maiores dignissimos reprehenderit sapiente, at nam, harum soluta necessitatibus ullam enim praesentium veritatis. Similique consectetur necessitatibus nulla aperiam nostrum numquam beatae mollitia, facere dolorem, repellendus at iste laboriosam eligendi excepturi recusandae.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <img src="./assets/images/it-service2.png" alt="" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="whatWeDo-div">
+                            <h1>What we do?</h1>
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center whatWeDo-miniDivs whatWeDo-miniDiv1">
+                                    <h4>Planning <i class="fa fa-calendar-check-o" aria-hidden="true"></i></h4>
+                                    <p>Vivamus posuere suscipit nulla maecenas et dapibus eros diam nec consequat aptent</p>
+                                </div>
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center whatWeDo-miniDivs whatWeDo-miniDiv2">
+                                    <h4>Production <i class="fa fa-product-hunt" aria-hidden="true"></i></h4>
+                                    <p>Vivamus posuere suscipit nulla maecenas et dapibus eros diam nec consequat aptent</p>
+                                </div>
+                                <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center whatWeDo-miniDivs whatWeDo-miniDiv3">
+                                    <h4>Marketing <i class="fa fa-bar-chart" aria-hidden="true"></i></h4>
+                                    <p>Vivamus posuere suscipit nulla maecenas et dapibus eros diam nec consequat aptent</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="aboutUs-statistics-div">
+                            <div class="aboutUs-statistics-text">
+                                <h4 class="sections-motto">Fun Fact</h4>
+                                <h1>Our Company by Number</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit quae quod quam illo.</p>
+                            </div>
+    
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-lg-3 aboutUs-statistics-numbers d-flex flex-column justify-content-center align-items-center">
+                                    <h2>475+</h2>
+                                    <p>Happy Clients</p>
+                                </div>
+                                <div class="col-lg-3 aboutUs-statistics-numbers d-flex flex-column justify-content-center align-items-center">
+                                    <h2>528+</h2>
+                                    <p>Project Finished</p>
+                                </div>
+                                <div class="col-lg-3 aboutUs-statistics-numbers d-flex flex-column justify-content-center align-items-center">
+                                    <h2>72</h2>
+                                    <p>Our Team</p>
+                                </div>
+                                <div class="col-lg-3 aboutUs-statistics-numbers d-flex flex-column justify-content-center align-items-center">
+                                    <h2>121</h2>
+                                    <p>Award Winning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+    
+                <section id="tab3" class="staff-section" style="padding-top: 80px;" class="tab-content">
+                    <h2 style="text-align: center;">Staff Table</h2>
+                    <div class="container" style="margin-top: 10px;">
+                        <div class="col-12" style="background: white">
+                            <table class="table table-bordered">
+                                <thead class="staff-thead">
+                                    <th>#</th>
+                                    <th>Iscinin adi</th>
+                                    <th>Iscinin Soyadi</th>
+                                    <th>Dogum tarixi</th>
+                                    <th><button class="btn btn-success">Yeni</button></th>
+                                </thead>
+                                <tbody class="staff-tbody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <div class="modal fade" id="staff-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Isci haqqinda melumat</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Ad</label>
+                                    <input type="text" name="name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Soyadi</label>
+                                    <input type="text" name="surname" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Dogum tarixi</label>
+                                    <input type="date" name="birthday" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Maas</label>
+                                    <input type="number" name="salary" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Cinsi</label>
+                                    <select class="form-control" name="gender">
+                                        <option value="1">Kisi</option>
+                                        <option value="2">Qadin</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Vezifesi</label>
+                                    <select class="form-control" name="position">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Bagla</button>
+                                <button type="button" class="btn btn-success"><i class="fa fa-save"></i> Yadda saxla</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                
+                <!-- position section -->
+                <section id="tab4" class="position-section" style="padding-top: 80px;" class="tab-content">
+                    <h2 style="text-align: center;">Position Table</h2>
+                    <div class="container" style="margin-top: 10px;">
+                        <div class="col-12" style="background: white">
+                            <table class="table table-bordered">
+                                <thead class="positions-thead">
+                                    <th>#</th>
+                                    <th>Vezifenin adi</th>
+                                    <th><button class="btn btn-success">Yeni</button></th>
+                                </thead>
+                                <tbody class="positions-tbody">
+                                    <!-- sehife load olunan kimi get-positions-a geden sorguyla db-da olan datayla doldururuq -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+    
+    
+    
+                <!-- departments section -->
+                <section id="tab5" class="departments-section" style="padding-top: 80px;" class="tab-content">
+                    <h2 style="text-align: center;">Staff Table</h2>
+                    <div class="container" style="margin-top: 15px;">
+                        <table class="table table-bordered">
+                            <thead class="departments-thead">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Departamentin adi</th>
+                                    <th>Isciler</th>
+                                </tr>
+                            </thead>
+                            <tbody class="departments-tbody">
+                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container" style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Departament adi</label>
+                                    <input type="text" name="departmant_name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label>Isciler</label>
+                                    <select class="js-example-basic-single form-control" name="employees[]" multiple="">
+                                    
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-success-departments">Elave et</button>
+                    </div>            
+                </section>
+    
+    
+    
+                <!-- img uploading section -->
+                <section id="tab6" class="imgUploading-section" class="tab-content">
+                    <h2 style="text-align: center; font-size: 25px;">Image Galery</h2>
+                    <p style="text-align: center;">
+                        <span style="color: red;">Life</span>
+                        <span style="color: blue;">is</span>
+                        <span style="color: orangered;">colorful</span>
+                        <span style="color: green;">when</span>
+                        <span style="color: rgba(55, 0, 255, 0.322);">you</span>
+                        <span style="color: rgb(255, 0, 34);">have</span>
+                        <span style="color: rgb(27, 27, 44);">images</span>
+                        <span style="color: rgb(0, 195, 255);">in</span>
+                        <span style="color: rgb(255, 51, 0);">your</span>
+                        <span style="color: rgba(0, 0, 255, 0.322);">gallery</span>
+                    </p>
+                    <div class="container w-100">
+                        <div class="card shadow-sm w-100">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4>Image Uploading</h4>
+                
+                                <form action="#" class="form" method="post" id="form">
+                                    <input type="file" name="Image" id="image" multiple="" class="d-none" onchange="image_select()">
+                                    <button class="btn btn-sm btn-primary" type="button" onclick="document.getElementById('image').click()">Choose Images</button>
+                                </form>
+                            </div>
+                
+                            <div class="card-body row d-flex flex-wrap justify-content-start" id="container">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+
+    let token = localStorage.getItem('token');
+      if (!token) {
+        location.href = 'login.html';
+    }
+    $.ajax({
+        url: 'https://api.mominov.site/api/check-token',
+        type: 'POST',
+        headers: {
+          Accept: 'application/json',
+          Authorization: 'Bearer ' + token,
+        },
+        error: function (response) {
+          location.href = 'login.html';
+        },
+    });
+      
+
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+
+        jQuery(document).ready(function($) {
+        var alterClass = function() {
+            var ww = document.body.clientWidth;
+            if (ww < 768) {
+                $('.toggle').addClass('active');
+                $('.navigation').addClass('active');
+                $('.main').addClass('active');
+            } else if (ww >= 768) {
+                $('.toggle').removeClass('active');
+                $('.navigation').removeClass('active');
+                $('.main').removeClass('active');
+            };
+        };
+        $(window).resize(function(){
+            alterClass();
+        });
+        //Fire it when the page first loads:
+        alterClass();
+        });
+
+
+
+        // // Show the first tab and hide the rest
+        // $('#tabs-nav li:first-child').addClass('active');
+        // $('.tab-content').hide();
+        // $('.tab-content:first').show();
+
+        // // Click function
+        // $('#tabs-nav li').click(function(){
+        // $('#tabs-nav li').removeClass('active');
+        // $(this).addClass('active');
+        // $('.tab-content').hide();
+        
+        // var activeTab = $(this).find('a').attr('href');
+        
+        // $(activeTab).fadeIn();
+        // return false;
+        // });
+        
+        // $(function() {
+        //     $('.home-page-link').hover(function() { 
+        //         $("#home-page-section").css("transition", "ease-in-out 0.7s");
+        //         $('#home-page-section').show(); 
+        //     }, function() { 
+        //         $('#home-page-section').hide(); 
+        //     });
+
+        //     $('.aboutUs-link').hover(function() { 
+        //         $(".aboutUs-section").css("transition", "ease-in-out 0.7s");
+        //         $('.aboutUs-section').show(); 
+        //     }, function() { 
+        //         $('.aboutUs-section').hide(); 
+        //     });
+
+        //     $('.staff-link').hover(function() { 
+        //         $(".staff-section").css("transition", "ease-in-out 0.7s");
+        //         $('.staff-section').show(); 
+        //     }, function() { 
+        //         $('.staff-section').hide(); 
+        //     });
+
+
+        //     $('.position-link').hover(function() { 
+        //         $(".position-section").css("transition", "ease-in-out 0.7s");
+        //         $('.position-section').show(); 
+        //     }, function() { 
+        //         $('.position-section').hide(); 
+        //     });
+
+
+        //     $('.departments-link').hover(function() { 
+        //         $(".departments-section").css("transition", "ease-in-out 0.7s");
+        //         $('.departments-section').show(); 
+        //     }, function() { 
+        //         $('.departments-section').hide(); 
+        //     });
+
+
+        //     $('.imgUploading-link').hover(function() { 
+        //         $(".imgUploading-section").css("transition", "ease-in-out 0.7s");
+        //         $('.imgUploading-section').show(); 
+        //     }, function() { 
+        //         $('.imgUploading-section').hide(); 
+        //     });
+        // });  
+    </script>
+
+    <script src="./assets/js/staff.js"></script>
+    <script src="./assets/js/position.js"></script>
+    <script src="./assets/js/departments.js"></script>
+    <script src="./assets/js/gallery.js"></script>
+</body>
+</html>

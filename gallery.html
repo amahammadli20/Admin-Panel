@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+    <style>
+        .image_container{
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .image_container img{
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        .image_container span{
+            top: -8px;
+            left: 20px;
+            color: red;
+            font-size: 28px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3 w-100">
+        <div class="card shadow-sm w-100">
+            <div class="card-header d-flex justify-content-between">
+                <h4>Image Uploading</h4>
+
+                <form action="#" class="form" method="post" id="form">
+                    <input type="file" name="Image" id="image" multiple="" class="d-none" onchange="image_select()">
+                    <button class="btn btn-sm btn-primary" type="button" onclick="document.getElementById('image').click()">Choose Images</button>
+                </form>
+            </div>
+
+            <div class="card-body row d-flex flex-wrap justify-content-start" id="container">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        var images = [];
+        function image_select(){
+            var image = document.getElementById('image').files;
+            // console.log(image);
+            for(var i = 0; i < image.length; i++){
+                if(check_duplicate(image[i].name)){
+                    images.push({
+                        "name": image[i].name,
+                        "url": URL.createObjectURL(image[i]),
+                        "file": image[i]
+                    })
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: image[i].name +' artiq elave olunub',
+                        text: 'Something went wrong!',
+                        footer: '<a href="">Yenisini sinayin</a>'
+                    })
+                    // alert(image[i].name + " artiq elave olunub")
+                }
+            }
+            document.getElementById('form').reset();
+            document.getElementById('container').innerHTML = image_show();
+        }
+
+        function image_show(){
+            var image = "";
+            images.forEach((i) => {
+                console.log(i);
+
+                image += `
+                <div class="image_container col-lg-4 col-md-6 col-sm-12 d-flex justify-content-between">
+                    <img src="`+ i.url +`" alt="Image">
+                    <span class="position-absolute" onclick="delete_image(`+ images.indexOf(i) +`)">
+                        &times;
+                    </span>
+                </div>`
+            })
+
+            return image;
+        }
+
+        function delete_image(e){
+            images.splice(e, 1);
+            document.getElementById('container').innerHTML = image_show();
+        }
+
+        function check_duplicate(name){
+            var image = true;
+
+            if(images.length > 0){
+                for(var e = 0; e < images.length; e++){
+                    if(images[e].name == name){
+                        image = false;
+                        break;
+                    }
+                }
+            }
+
+            return image;
+        }
+    </script>
+</body>
+</html>

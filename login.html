@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <style>
+      body{
+        background-color: rgb(32, 32, 56);
+      }
+
+      .container h1{
+        margin-top: 30px;
+        color: lightblue;
+        text-align: center;
+      }
+
+      .container label{
+        color: lightblue;
+        font-size: 20px;
+      }
+
+      .container .inputs{
+        margin-bottom: 20px;
+        width: 60%;
+      }
+
+      .btn-success,
+      .btn-primary{
+        width: 200px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .btn-success,
+        .btn-primary{
+          width: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+      <h1>Login</h1>
+
+      <div class="inputs">
+        <label>Email</label>
+        <input class="form-control" type="email" name="email" />
+      </div>
+
+      <div class="inputs">
+        <label> Password</label>
+        <input class="form-control" type="password" name="password" />
+      </div>
+
+      <button class="btn btn-success mt-3">Register</button>
+      <button class="btn btn-primary mt-3">Login</button>
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var token = localStorage.getItem('token');
+
+        $.ajax({
+          url:"https://api.mominov.site/api/check-token",
+          type:"POST",
+          headers:{
+            'Accept':'application/json',
+            'Authorization': 'Bearer '+ token
+          },
+          success:function(){
+            // location.href='index.html'
+
+          },
+          error:function(response)
+          {
+            console.log(response);
+          }
+        })
+      });
+
+      $('.container').on('click', '.btn-primary', function () {
+        var email = $('input[name="email"]').val().trim();
+        var password = $('input[name="password"]').val().trim();
+
+        $.ajax({
+          url: 'https://api.mominov.site/api/login',
+          type: 'POST',
+          data: { 
+            email, 
+            password 
+          },
+          success: function (response) {
+            var token = response.success.token;
+            localStorage.setItem('token', token);
+            location.href = 'index.html';
+          },
+          error: function (response) {
+            console.log(response);
+          },
+        });
+      });
+
+      $('.container').on('click', '.btn-success', function () {
+        location.href = 'register.html';
+      });
+    </script>
+  </body>
+</html>
